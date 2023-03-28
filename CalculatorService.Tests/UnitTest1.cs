@@ -1,6 +1,6 @@
 namespace CalculatorService.Tests;
 
-public class UnitTest1
+public class DivisaoTest
 {
     private readonly CalculadoraService calc = new CalculadoraService();
 
@@ -17,5 +17,19 @@ public class UnitTest1
 
         // Assert
         Assert.True(double.IsNaN(resultado));
+    }
+}
+
+public class SomaTests
+{
+    private readonly CalculadoraService calc = new CalculadoraService();
+
+    [Fact]
+    public void TestarSomaComMaiorNumero()
+    {
+        int a = int.MaxValue;
+        int b = 1;
+
+        Assert.Throws<OverflowException>(() => calc.Soma(a, b));
     }
 }
