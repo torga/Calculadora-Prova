@@ -2,9 +2,20 @@ namespace CalculatorService.Tests;
 
 public class UnitTest1
 {
+    private readonly CalculadoraService calc = new CalculadoraService();
+
+
     [Fact]
-    public void Test1()
+    public void TestarDivisaoComNaN()
     {
-        Assert.Equal(1, 1);
+        // Arrange
+        double a = 2.0;
+        double b = double.NaN;
+
+        // Act
+        double resultado = calc.Divisao(a, b);
+
+        // Assert
+        Assert.True(double.IsNaN(resultado));
     }
 }

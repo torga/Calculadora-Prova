@@ -57,8 +57,6 @@ A linguagem de programação utilizada é o C#, e o projeto foi desenvolvido usa
         Multiplicando dois números em que um deles é NaN (Not a Number)
 
     Divisao()
-        Dividindo por zero com o primeiro parâmetro como double
-        Dividindo por zero com o primeiro parâmetro como inteiro
         Dividindo dois números em que um deles é NaN (Not a Number)
 
     Media()
